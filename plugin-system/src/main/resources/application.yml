@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: plugin-system
+
+plugin:
+  system:
+    # Directory where plugins are stored
+    plugins-directory: ./plugins
+    # Enable hot reload functionality
+    hot-reload-enabled: true
+    # File watch interval in milliseconds
+    watch-interval: 1000
+    # Maximum number of plugins that can be loaded
+    max-plugins: 100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,plugins
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.icwind.pluginsystem: DEBUG
+    root: INFO

@@ -1,0 +1,4 @@
+rootProject.name = 'space-plugin-system'
+
+include ':plugin-api'
+include ':plugin-system'
